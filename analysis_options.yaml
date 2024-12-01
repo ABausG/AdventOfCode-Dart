@@ -7,3 +7,4 @@ linter:
   rules:
     flutter_style_todos: false
     avoid_print: false
+    omit_local_variable_types: false
