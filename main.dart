@@ -18,7 +18,7 @@ final days = <GenericDay>[
   Day11(),
 ];
 
-void main(List<String?> args) {
+Future<void> main(List<String?> args) async {
   var onlyShowLast = true;
 
   if (args.length == 1 && args[0].isHelperArgument()) {
@@ -30,7 +30,7 @@ void main(List<String?> args) {
     onlyShowLast = false;
   }
 
-  onlyShowLast
+  return onlyShowLast
       ? days.last.printSolutions()
       : days.forEach((day) => day.printSolutions());
 }
