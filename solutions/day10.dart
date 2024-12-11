@@ -35,13 +35,13 @@ class Day10 extends GenericDay {
   int solvePart1() {
     final input = parseInput();
     final allDirections = List<List<Direction>>.generate(
-        pow(Direction.values.length, 9).toInt(),
-        (index) => List<Direction>.generate(
-              9,
-              (i) => Direction.values[
-                  (index ~/ pow(Direction.values.length, i)) %
-                      Direction.values.length],
-            ));
+      pow(Direction.values.length, 9).toInt(),
+      (index) => List<Direction>.generate(
+        9,
+        (i) => Direction.values[(index ~/ pow(Direction.values.length, i)) %
+            Direction.values.length],
+      ),
+    );
 
     final trailheads = <(int, int)>[];
 
@@ -91,13 +91,13 @@ class Day10 extends GenericDay {
   int solvePart2() {
     final input = parseInput();
     final allDirections = List<List<Direction>>.generate(
-        pow(Direction.values.length, 9).toInt(),
-        (index) => List<Direction>.generate(
-              9,
-              (i) => Direction.values[
-                  (index ~/ pow(Direction.values.length, i)) %
-                      Direction.values.length],
-            ));
+      pow(Direction.values.length, 9).toInt(),
+      (index) => List<Direction>.generate(
+        9,
+        (i) => Direction.values[(index ~/ pow(Direction.values.length, i)) %
+            Direction.values.length],
+      ),
+    );
 
     final trailheads = <(int, int)>[];
 
